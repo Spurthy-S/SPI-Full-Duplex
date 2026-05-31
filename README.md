@@ -1,75 +1,70 @@
 # SPI Full-Duplex Communication
 
-## Overview
+## 📖 Overview
 
-This project implements the Serial Peripheral Interface (SPI) protocol in Verilog HDL. The design includes SPI Master and SPI Slave modules capable of full-duplex data transfer.
+A reusable SPI (Serial Peripheral Interface) implementation written in Verilog HDL and verified using QuestaSim.
 
-The project was developed and verified using QuestaSim.
+The project demonstrates full-duplex communication between an SPI Master and SPI Slave using MOSI, MISO, SCLK, and Chip Select signals.
 
-## Features
+## ⚡ Features
 
 * Full-duplex SPI communication
-* Master and Slave implementation
+* SPI Master implementation
+* SPI Slave implementation
 * Top-level integration module
-* Functional verification using a testbench
-* Simulation support in QuestaSim
+* Functional verification using a Verilog testbench
+* Synthesizable Verilog HDL design
+* Simulated and verified in QuestaSim
 
-## Project Structure
+## 📁 Project Structure
 
-SPI-Full-Duplex/
+```text
+Source/
+│
+├── master.v      # SPI Master
+├── slave.v       # SPI Slave
+└── spi_top.v     # Top-level module
 
-├── Source/
+Testbench/
+│
+└── tb_spi.v      # Testbench
 
-│ ├── master.v
+docs/
+│
+├── spi_block_diagram.png
+└── spi_waveform.png
+```
 
-│ ├── slave.v
-
-│ └── spi_top.v
-
-├── Testbench/
-
-│ └── tb_spi.v
-
-├── docs/
-
-│ ├── spi_block_diagram.png
-
-│ └── spi_waveform.png
-
-├── README.md
-
-└── .gitignore
-
-## Modules
+## 🏗️ Module Description
 
 ### master.v
 
-Implements the SPI Master controller responsible for generating the SPI clock, chip-select signal, and transmitting data over MOSI.
+Implements the SPI Master controller. Generates SCLK and CS signals and transmits data through MOSI.
 
 ### slave.v
 
-Implements the SPI Slave controller responsible for receiving data from MOSI and transmitting data through MISO.
+Implements the SPI Slave controller. Receives MOSI data and transmits data through MISO.
 
 ### spi_top.v
 
-Top-level module connecting the SPI Master and SPI Slave modules.
+Top-level module integrating SPI Master and SPI Slave.
 
 ### tb_spi.v
 
-Testbench used for functional verification of SPI communication.
+Verilog testbench used to verify SPI communication functionality.
 
-## Simulation Tool
+## 🛠️ Simulation Tool
 
 * QuestaSim
 
-## Language
+## 💻 Language
 
 * Verilog HDL
 
-## Results
+## 📊 Results
 
-Successful full-duplex data transfer was verified through simulation.
+Successful full-duplex data transfer verified through simulation.
 
-## Author
+## 👩‍💻 Author
 
 Spurthy S
