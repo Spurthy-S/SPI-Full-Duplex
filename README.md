@@ -31,7 +31,6 @@ Testbench/
 
 docs/
 │
-├── spi_block_diagram.png
 └── spi_waveform.png
 ```
 
